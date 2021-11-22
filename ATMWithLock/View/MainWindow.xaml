@@ -12,21 +12,24 @@
                 FontFamily="comic sans ms"
                 FontSize="30"
                 Width="250"
-                ></Button>
+                Command="{Binding InsertBtnCommand}"></Button>
         <Label Content="Card Number"
                FontSize="20"
-               FontFamily="comic sans ms"></Label>
+               FontFamily="comic sans ms"
+               Visibility="Hidden"
+               Name="cardNumberLbl"></Label>
         <WrapPanel>
             <TextBox x:Name="cardNumberTxtbx"
                  Width="250"
                  FontSize="24"
                  HorizontalAlignment="Left"
-                 Margin="0,0,275,0"></TextBox>
+                 Margin="0,0,275,0"
+                     Visibility="Hidden"></TextBox>
             <Label Width="250"
                  FontSize="24"
                  HorizontalAlignment="Left"
                    Name="fullNameLbl"
-                   Content="Tural Tahirli"></Label>
+                   ></Label>
         </WrapPanel>
         <WrapPanel Margin="0,0,0,0">
             <Button x:Name="loadBtn"
@@ -35,12 +38,14 @@
                 FontSize="25"
                 Width="150"
                 HorizontalAlignment="Left"
-                Margin="0,5,390,0"></Button>
+                Margin="0,5,390,0"
+                    Visibility="Hidden"
+                    Command="{Binding LoadBtnCommand}"></Button>
             <Label Width="250"
                  FontSize="24"
                  HorizontalAlignment="Left"
                  Name="balanceLbl"
-                 Content="150.0 Azn"></Label>
+                 ></Label>
         </WrapPanel>
         <WrapPanel Margin="200,80,0,0">
             <TextBox x:Name="moneyCountTxtbx"
@@ -52,11 +57,12 @@
                 FontFamily="comic sans ms"
                 FontSize="25"
                 Width="200"
-                ></Button>
+                Command="{Binding TransferMoneyBtnCommand}"></Button>
             <Label Name="moneyAnimationLbl"
                    Width="100"
                    Height="60"
-                   Margin="50,0,0,0"></Label>
+                   Margin="50,0,0,0"
+                   ></Label>
         </WrapPanel>
     </StackPanel>
 </Window>
